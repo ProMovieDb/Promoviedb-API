@@ -1,10 +1,11 @@
 plugins {
     id 'java-library'
     id 'maven-publish'
+    id 'org.jreleaser' version '1.20.0'
 }
 
 group = 'com.promoviedb'
-version = '1.0.0'
+version = '1.0.1'
 
 java {
     sourceCompatibility = JavaVersion.VERSION_1_8
@@ -42,16 +43,97 @@ publishing {
         maven(MavenPublication) {
             from components.java
 
+            groupId = 'com.promoviedb'
+            artifactId = 'promoviedb-api'
+            version = '1.0.0'
+
             pom {
                 name = 'ProMovieDB Java SDK'
-                description = 'Java SDK for ProMovieDB API'
-                url = 'https://github.com/promoviedb/promoviedb-api'
+                description = 'Official Java SDK for the ProMovieDB API - Your gateway to comprehensive movie, TV show, and entertainment data'
+                url = 'https://github.com/ProMovieDb/Promoviedb-API'
+                inceptionYear = '2024'
 
                 licenses {
                     license {
                         name = 'The Apache License, Version 2.0'
                         url = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
                     }
+                }
+
+                developers {
+                    developer {
+                        id = 'promoviedb'
+                        name = 'ProMovieDB Team'
+                        email = 'admin@promoviedb.com'
+                        organization = 'ProMovieDB'
+                        organizationUrl = 'https://www.promoviedb.com'
+                    }
+                }
+
+                scm {
+                    connection = 'scm:git:git://github.com/ProMovieDb/Promoviedb-API.git'
+                    developerConnection = 'scm:git:ssh://github.com/ProMovieDb/Promoviedb-API.git'
+                    url = 'https://github.com/ProMovieDb/Promoviedb-API'
+                }
+            }
+        }
+    }
+
+    repositories {
+        maven {
+            url = layout.buildDirectory.dir('staging-deploy')
+        }
+    }
+}
+
+jreleaser {
+    project {
+        name = 'ProMovieDB Java SDK'
+        description = 'Official Java SDK for the ProMovieDB API'
+        longDescription = 'Official Java SDK for the ProMovieDB API - Your gateway to comprehensive movie, TV show, and entertainment data'
+        website = 'https://github.com/ProMovieDb/Promoviedb-API'
+        authors = ['ProMovieDB Team']
+        license = 'Apache-2.0'
+        inceptionYear = '2024'
+        tags = ['java', 'sdk', 'api', 'movies', 'tv-shows', 'entertainment']
+        links {
+            homepage = 'https://www.promoviedb.com'
+        }
+    }
+
+    release {
+        github {
+            overwrite = true
+            uploadAssets = 'ALWAYS'
+            changelog {
+                formatted = 'ALWAYS'
+                preset = 'conventional-commits'
+                contributors {
+                    enabled = false
+                }
+            }
+        }
+    }
+
+    signing {
+        active = 'ALWAYS'
+        armored = true
+    }
+
+    deploy {
+        maven {
+            mavenCentral {
+                sonatype {
+                    active = 'ALWAYS'
+                    url = 'https://central.sonatype.com/api/v1/publisher'
+                    stagingRepository('build/staging-deploy')
+                    authorization = 'BEARER'
+                    applyMavenCentralRules = true
+                    sign = true
+                    checksums = true
+                    sourceJar = true
+                    javadocJar = true
+                    verifyPom = true
                 }
             }
         }
