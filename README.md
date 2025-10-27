@@ -2,7 +2,7 @@
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Java](https://img.shields.io/badge/Java-8%2B-orange.svg)](https://www.oracle.com/java/)
-[![Version](https://img.shields.io/badge/version-1.0.0-green.svg)](https://github.com/promoviedb/promoviedb-api)
+[![Version](https://img.shields.io/badge/version-1.0.1-green.svg)](https://github.com/promoviedb/promoviedb-api)
 
 Official Java SDK for the **ProMovieDB API** - Your gateway to comprehensive movie, TV show, and entertainment data.
 
@@ -160,7 +160,7 @@ Add the following dependency to your `build.gradle`:
 
 ```gradle
 dependencies {
-    implementation 'com.promoviedb:promoviedb-api:1.0.0'
+    implementation 'com.promoviedb:promoviedb-api:1.0.1'
 }
 ```
 
@@ -172,7 +172,7 @@ Add to your `pom.xml`:
 <dependency>
     <groupId>com.promoviedb</groupId>
     <artifactId>promoviedb-api</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
 </dependency>
 ```
 
