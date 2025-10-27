@@ -43,12 +43,3 @@ bin/
 
 # Virtual machine crash logs
 hs_err_pid*
-
-# Temporary files
-*.tmp
-*.bak
-*.swp
-*~
-
-# Gradle wrapper
-!gradle-wrapper.jar
