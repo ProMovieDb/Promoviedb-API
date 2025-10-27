@@ -52,3 +52,14 @@ hs_err_pid*
 
 # Gradle wrapper
 !gradle-wrapper.jar
+
+# JReleaser output
+build/jreleaser/
+
+# Sensitive files - DO NOT COMMIT
+.env
+gpg-*.asc
+gpg-*.gpg
+doc/gpg-gen-key.conf
+secring.gpg
+*.pgp

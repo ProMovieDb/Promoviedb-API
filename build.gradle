@@ -45,7 +45,7 @@ publishing {
 
             groupId = 'com.promoviedb'
             artifactId = 'promoviedb-api'
-            version = '1.0.0'
+            version = project.version
 
             pom {
                 name = 'ProMovieDB Java SDK'
@@ -94,7 +94,7 @@ jreleaser {
         website = 'https://github.com/ProMovieDb/Promoviedb-API'
         authors = ['ProMovieDB Team']
         license = 'Apache-2.0'
-        inceptionYear = '2024'
+        inceptionYear = '2025'
         tags = ['java', 'sdk', 'api', 'movies', 'tv-shows', 'entertainment']
         links {
             homepage = 'https://www.promoviedb.com'
@@ -127,13 +127,6 @@ jreleaser {
                     active = 'ALWAYS'
                     url = 'https://central.sonatype.com/api/v1/publisher'
                     stagingRepository('build/staging-deploy')
-                    authorization = 'BEARER'
-                    applyMavenCentralRules = true
-                    sign = true
-                    checksums = true
-                    sourceJar = true
-                    javadocJar = true
-                    verifyPom = true
                 }
             }
         }
