@@ -145,7 +145,7 @@ Detailed credit information:
 
 ### 💚 Status & Health
 
-API monitoring:
+API Status:
 
 - **Health Checks**: Verify API availability
 - **Ping Endpoint**: Quick connectivity test
