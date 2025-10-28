@@ -7,7 +7,7 @@
 Official Java SDK for the **ProMovieDB API** - Your gateway to comprehensive movie, TV show, and entertainment data.
 
 > 🌐 **Visit:** [www.promoviedb.com](https://www.promoviedb.com)
-> 📧 **Support & API Key:** [admin@promoviedb.com](mailto:admin@promoviedb.com)
+> 📧 **Support & API Key:** [support@promoviedb.com](mailto:support@promoviedb.com)
 
 ---
 
@@ -194,7 +194,7 @@ public class QuickStart {
     static void main(String[] args) {
         // Initialize the client
         ProMovieDBClient client = new ProMovieDBClient.Builder()
-                .apiKey("YOUR_API_KEY")  // Get your key from admin@promoviedb.com
+                .apiKey("YOUR_API_KEY")  // Get your key from apply@promoviedb.com
                 .language("en")
                 .build();
 
@@ -220,7 +220,7 @@ All API requests require an API key.
 ### How to Get Your API Key
 
 1. Visit [www.promoviedb.com](https://www.promoviedb.com)
-2. Email [admin@promoviedb.com](mailto:admin@promoviedb.com) to request an API key
+2. Email [apply@promoviedb.com](mailto:apply@promoviedb.com) to request an API key
 3. Include your use case and expected request volume
 
 ### Using Your API Key
@@ -719,7 +719,7 @@ public MovieDetails getMovie(String id) {
 
 If you need assistance with the SDK or API:
 
-- **📧 Email**: [admin@promoviedb.com](mailto:admin@promoviedb.com)
+- **📧 Email**: [support@promoviedb.com](mailto:support@promoviedb.com)
 - **🌐 Website**: [www.promoviedb.com](https://www.promoviedb.com)
 - **📖 Documentation**: Full API documentation available on the website
 
@@ -728,15 +728,15 @@ If you need assistance with the SDK or API:
 To obtain an API key:
 
 1. Visit [www.promoviedb.com](https://www.promoviedb.com)
-2. Email [admin@promoviedb.com](mailto:admin@promoviedb.com) with:
-   - Your name and organization
-   - Intended use case
-   - Expected request volume
-   - Project timeline
+2. Email [apply@promoviedb.com](mailto:apply@promoviedb.com) with:
+    - Your name and organization
+    - Intended use case
+    - Expected request volume
+    - Project timeline
 
 ### Rate Limits
 
-For information about rate limits or to request higher limits, contact [admin@promoviedb.com](mailto:admin@promoviedb.com).
+For information about rate limits or to request higher limits, contact [support@promoviedb.com](mailto:support@promoviedb.com).
 
 ### Reporting Issues
 
