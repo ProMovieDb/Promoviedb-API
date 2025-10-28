@@ -91,8 +91,8 @@ jreleaser {
         name = 'ProMovieDB Java SDK'
         description = 'Official Java SDK for the ProMovieDB API'
         longDescription = 'Official Java SDK for the ProMovieDB API - Your gateway to comprehensive movie, TV show, and entertainment data'
-        website = 'https://github.com/ProMovieDb/Promoviedb-API'
-        authors = ['ProMovieDB Team']
+        website = 'https://github.com/ProMovieDB/ProMovieDB-API'
+        authors = ['support@promoviedb.com']
         license = 'Apache-2.0'
         inceptionYear = '2025'
         tags = ['java', 'sdk', 'api', 'movies', 'tv-shows', 'entertainment']
